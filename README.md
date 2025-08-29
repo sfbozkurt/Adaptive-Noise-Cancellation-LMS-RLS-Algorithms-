@@ -82,21 +82,21 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 Graphically displayed the original denoised signal, noise reference signal, the noised signal, and the filtered outputs using both LMS and RLS algorithms, all together:
 
 
-<img width="563" height="368" alt="outputs" src="https://github.com/user-attachments/assets/7f4b8685-f316-4a23-9618-56f39d859e22" />
+<img width="563" height="368" alt="outputs" src="https://github.com/user-attachments/assets/7f4b8685-f316-4a23-9618-56f39d859e22" /><br>
 
 
 
 **NI Denoised Signal - Noise Reference: White Noise - Noisy Signal:**
 
 
-<img width="451" height="346" alt="NI" src="https://github.com/user-attachments/assets/69f15f9a-4c10-42e0-b0a0-e58f81d6d568" />
+<img width="451" height="346" alt="NI" src="https://github.com/user-attachments/assets/69f15f9a-4c10-42e0-b0a0-e58f81d6d568" /><br>
 
 
 
 **Filtered signals (RLS & LMS):**
 
 
-<img width="331" height="304" alt="rls" src="https://github.com/user-attachments/assets/a372be44-49ec-4cd8-886d-4d297c20d7e0" />
+<img width="331" height="304" alt="rls" src="https://github.com/user-attachments/assets/a372be44-49ec-4cd8-886d-4d297c20d7e0" /><br>
 
 ---
 
@@ -106,7 +106,7 @@ Graphically displayed the original denoised signal, noise reference signal, the 
 
 **ΔSNR (dB) — LMS vs RLS:**
 
-<img width="459" height="425" alt="SNR_lambda1" src="https://github.com/user-attachments/assets/40d6f789-2e4d-4d2d-a3bc-297908210856" />
+<img width="459" height="425" alt="SNR_lambda1" src="https://github.com/user-attachments/assets/40d6f789-2e4d-4d2d-a3bc-297908210856" /><br>
 
 
 
@@ -114,20 +114,20 @@ Graphically displayed the original denoised signal, noise reference signal, the 
 
 - Subsequently, pink noise was introduced to the denoised signal. The RLS algorithm continued to demonstrate its advantage by attaining an SNR improvement of 18.54 dB, compared to 8.70 dB achieved by LMS. When brown noise was added, RLS still outperformed LMS, achieving an SNR improvement of 15.22 dB versus 4.82 dB for LMS. 
 
-- Across all three types of noise -white, pink, and brown- the RLS algorithm consistently provided greater SNR improvements compared to the LMS algorithm. However, the magnitude of SNR enhancement decreased progressively from white noise to pink noise to brown noise. This trend can be attributed to the inherent spectral characteristics of each noise type.
+- Across all three types of noise -white, pink, and brown- the RLS algorithm consistently provided greater SNR improvements compared to the LMS algorithm. However, the magnitude of SNR enhancement decreased progressively from white noise to pink noise to brown noise. This trend can be attributed to the inherent spectral characteristics of each noise type.<br>
 
 
 **Adaptation Speed:**
 
-<img width="457" height="451" alt="adaptationSpeed" src="https://github.com/user-attachments/assets/e23f48b1-e331-457c-92b8-ef541d8bb963" />
+<img width="457" height="451" alt="adaptationSpeed" src="https://github.com/user-attachments/assets/e23f48b1-e331-457c-92b8-ef541d8bb963" /><br>
 
 
-- After adding different types of noise to each half of the signal to simulate environment changing, it was observed that with the forgetting factor λ=1, the RLS algorithm required a longer time to stabilize compared to the LMS algorithm. Additionally, the number of instances where the RLS squared error exceeded the LMS squared error was higher than the reverse, as depicted in the "Comparison of Error Occurrences" chart. The Average Squared Error Post-Change for Custom RLS was also greater than that for Custom LMS, further indicating the superior performance of LMS under these conditions. 
+- After adding different types of noise to each half of the signal to simulate environment changing, it was observed that with the forgetting factor λ=1, the RLS algorithm required a longer time to stabilize compared to the LMS algorithm. Additionally, the number of instances where the RLS squared error exceeded the LMS squared error was higher than the reverse, as depicted in the "Comparison of Error Occurrences" chart. The Average Squared Error Post-Change for Custom RLS was also greater than that for Custom LMS, further indicating the superior performance of LMS under these conditions. <br>
 
 
 **Runtime (s) per run (MATLAB `tic/toc`):**
 
-<img width="431" height="161" alt="computationalEfficiency" src="https://github.com/user-attachments/assets/c161f85c-5dee-421b-a448-d9d4388e50dd" />
+<img width="431" height="161" alt="computationalEfficiency" src="https://github.com/user-attachments/assets/c161f85c-5dee-421b-a448-d9d4388e50dd" /><br>
 
 - The LMS algorithm demonstrates markedly higher computational efficiency compared to the RLS algorithm, both in built-in and custom implementations. This efficiency is primarily due to the LMS's simpler computational structure, which involves fewer and less complex operations. On the other hand, the RLS algorithm, despite its potential advantages in adaptation speed and noise reduction under optimal parameter settings, incurs a higher computational burden that results in longer execution times.
 
