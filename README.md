@@ -37,7 +37,7 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 ### 3.3 RLS (least-squares recursion)
 
 * **Pros:** Very fast convergence.
-* **Cons:** Higher complexity (≈$\mathcal{O}(M^2)$), sensitive to numerical settings.
+* **Cons:** Higher complexity, sensitive to numerical settings.
 
 > **Filter order (M):** Choose based on expected impulse response length of the noise path / correlation structure. Larger **M** captures more correlation but increases cost and risk of overfitting/instability.
 
