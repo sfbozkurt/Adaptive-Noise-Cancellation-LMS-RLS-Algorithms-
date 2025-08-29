@@ -68,24 +68,30 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 
 ---
 
-## 6) Results (Placeholders to fill)
+## 6) Results
 
 
 ### 6.1 ΔSNR (dB) — LMS vs RLS
 
 <img width="459" height="425" alt="SNR_lambda1" src="https://github.com/user-attachments/assets/40d6f789-2e4d-4d2d-a3bc-297908210856" />
 
+- The experiment commenced by adding white noise to the denoised signal from National Instruments (NI) with the forgetting factor λ set to 1. Under these conditions, the RLS algorithm achieved a significant Signal-to-Noise Ratio (SNR) improvement of 23.67 dB, outperforming the LMS algorithm, which recorded an SNR enhancement of 18.53 dB. This outcome highlights the superior effectiveness of the RLS algorithm in reducing white noise. 
+
+- Subsequently, pink noise was introduced to the denoised signal. The RLS algorithm continued to demonstrate its advantage by attaining an SNR improvement of 18.54 dB, compared to 8.70 dB achieved by LMS. When brown noise was added, RLS still outperformed LMS, achieving an SNR improvement of 15.22 dB versus 4.82 dB for LMS. 
+
+- Across all three types of noise -white, pink, and brown- the RLS algorithm consistently provided greater SNR improvements compared to the LMS algorithm. However, the magnitude of SNR enhancement decreased progressively from white noise to pink noise to brown noise. This trend can be attributed to the inherent spectral characteristics of each noise type.
 
 **Adaptation Speed:**
 
 <img width="457" height="451" alt="adaptationSpeed" src="https://github.com/user-attachments/assets/e23f48b1-e331-457c-92b8-ef541d8bb963" />
 
+- After adding different types of noise to each half of the signal to simulate environment changing, it was observed that with the forgetting factor λ=1, the RLS algorithm required a longer time to stabilize compared to the LMS algorithm. Additionally, the number of instances where the RLS squared error exceeded the LMS squared error was higher than the reverse, as depicted in the "Comparison of Error Occurrences" chart. The Average Squared Error Post-Change for Custom RLS was also greater than that for Custom LMS, further indicating the superior performance of LMS under these conditions. 
 
 **Runtime (s) per run (MATLAB `tic/toc`):**
 
 <img width="431" height="161" alt="computationalEfficiency" src="https://github.com/user-attachments/assets/c161f85c-5dee-421b-a448-d9d4388e50dd" />
 
-
+- The LMS algorithm demonstrates markedly higher computational efficiency compared to the RLS algorithm, both in built-in and custom implementations. This efficiency is primarily due to the LMS's simpler computational structure, which involves fewer and less complex operations. On the other hand, the RLS algorithm, despite its potential advantages in adaptation speed and noise reduction under optimal parameter settings, incurs a higher computational burden that results in longer execution times.
 
 ### 6.2 Figures
 
@@ -104,11 +110,20 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 ---
 
 
-## 7) Limitations & Future Work
+## 7) Choosing the Right Algorithm
 
-* **RLS**: higher computational cost and numerical sensitivity.
-* **LMS**: slower convergence under colored noise; may require normalization (NLMS) for robustness.
-* **Future:** NLMS/APA variants, time-varying λ (RLS), multi-mic/reference experiments, and real-world recordings.
+The selection between RLS and LMS can be guided by the specific needs of the application: 
+
+* RLS is advantageous when: 
+- High SNR Improvement is essential, particularly in environments with complex or highly correlated noise.
+- Rapid Adaptation to changing signal conditions is required.
+- Computational Resources are sufficient to handle the increased processing demands.
+- Precision in error minimization and coefficient adjustment is a priority.
+
+* LMS is advantageous when:
+- Computational Efficiency and low processing overhead are critical, such as in embedded systems or real-time applications with limited hardware capabilities.
+- The signal environment is relatively stable, or changes occur gradually, reducing the need for rapid adaptation.
+- Simplicity and ease of implementation are desired, especially for initial prototyping or educational purposes.
 
 ---
 
