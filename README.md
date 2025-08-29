@@ -83,6 +83,7 @@ Graphically displayed the original denoised signal, noise reference signal, the 
 **Filtered signals (RLS & LMS):**
 <img width="331" height="304" alt="rls" src="https://github.com/user-attachments/assets/a372be44-49ec-4cd8-886d-4d297c20d7e0" />
 
+---
 
 ## 7) Adaptive Filter Performance Analysis
 
