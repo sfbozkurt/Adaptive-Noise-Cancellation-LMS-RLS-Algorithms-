@@ -77,10 +77,12 @@ Graphically displayed the original denoised signal, noise reference signal, the 
 
 
 **NI Denoised Signal - Noise Reference: White Noise - Noisy Signal:**
+
 <img width="451" height="346" alt="NI" src="https://github.com/user-attachments/assets/69f15f9a-4c10-42e0-b0a0-e58f81d6d568" />
 
 
 **Filtered signals (RLS & LMS):**
+
 <img width="331" height="304" alt="rls" src="https://github.com/user-attachments/assets/a372be44-49ec-4cd8-886d-4d297c20d7e0" />
 
 ---
