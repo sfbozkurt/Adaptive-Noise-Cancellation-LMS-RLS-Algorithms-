@@ -1,7 +1,8 @@
 # Adaptive Noise Canceller (ANC) — MATLAB (LMS & RLS)
 
 ---
-<br>
+
+
 ## 1) Overview
 
 This project implements and compares **Least Mean Squares (LMS)** and **Recursive Least Squares (RLS)** adaptive filters for speech denoising under **white**, **pink**, and **brown** noise scenarios. Step size (**μ**), forgetting factor (**λ**), and **filter order** are tuned for stable convergence.
@@ -11,7 +12,8 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 * **Artifacts:** Convergence/MSE analyses and stability notes across μ/λ sweeps.
 
 ---
-<br>
+
+
 ## 2) Quick Start
 
 
@@ -20,7 +22,8 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 3. **Run.**
 
 ---
-<br>
+
+
 ## 3) Methodology
 
 ### 3.1 ANC Setup
@@ -39,10 +42,13 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 * **Pros:** Very fast convergence.
 * **Cons:** Higher complexity, sensitive to numerical settings.
 
-> **Filter order (M):** Choose based on expected impulse response length of the noise path / correlation structure. Larger **M** captures more correlation but increases cost and risk of overfitting/instability.
+
+
+**Filter order (M):** Choose based on expected impulse response length of the noise path / correlation structure. Larger **M** captures more correlation but increases cost and risk of overfitting/instability.
 
 ---
-<br>
+
+
 ## 4) Evaluation
 
 ### 4.1 Metrics
@@ -58,7 +64,8 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 * **Brown (Brownian):** $1/f^2$ spectrum; even stronger low-frequency content.
 
 ---
-<br>
+
+
 ## 5) Parameter Tuning & Stability Notes
 
 * **LMS step size (μ):** typically $0 < \mu < 1 / (\alpha \cdot P_x)$, where $P_x$ is input power and $\alpha$ depends on **M**. Start small; increase until near-divergence, then back off.
@@ -67,7 +74,8 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 
 
 ---
-<br>
+
+
 ### 6) Output Signals
 
 **Waveforms:**
@@ -75,25 +83,29 @@ Graphically displayed the original denoised signal, noise reference signal, the 
 
 <img width="563" height="368" alt="outputs" src="https://github.com/user-attachments/assets/7f4b8685-f316-4a23-9618-56f39d859e22" />
 
-<br>
+
+
 **NI Denoised Signal - Noise Reference: White Noise - Noisy Signal:**
 
 <img width="451" height="346" alt="NI" src="https://github.com/user-attachments/assets/69f15f9a-4c10-42e0-b0a0-e58f81d6d568" />
 
-<br>
+
+
 **Filtered signals (RLS & LMS):**
 
 <img width="331" height="304" alt="rls" src="https://github.com/user-attachments/assets/a372be44-49ec-4cd8-886d-4d297c20d7e0" />
 
 ---
-<br>
+
+
 ## 7) Adaptive Filter Performance Analysis
 
 
 **ΔSNR (dB) — LMS vs RLS:**
 
 <img width="459" height="425" alt="SNR_lambda1" src="https://github.com/user-attachments/assets/40d6f789-2e4d-4d2d-a3bc-297908210856" />
-<br>
+
+
 - The experiment commenced by adding white noise to the denoised signal from National Instruments (NI) with the forgetting factor λ set to 1. Under these conditions, the RLS algorithm achieved a significant Signal-to-Noise Ratio (SNR) improvement of 23.67 dB, outperforming the LMS algorithm, which recorded an SNR enhancement of 18.53 dB. This outcome highlights the superior effectiveness of the RLS algorithm in reducing white noise. 
 
 - Subsequently, pink noise was introduced to the denoised signal. The RLS algorithm continued to demonstrate its advantage by attaining an SNR improvement of 18.54 dB, compared to 8.70 dB achieved by LMS. When brown noise was added, RLS still outperformed LMS, achieving an SNR improvement of 15.22 dB versus 4.82 dB for LMS. 
@@ -103,9 +115,11 @@ Graphically displayed the original denoised signal, noise reference signal, the 
 **Adaptation Speed:**
 
 <img width="457" height="451" alt="adaptationSpeed" src="https://github.com/user-attachments/assets/e23f48b1-e331-457c-92b8-ef541d8bb963" />
-<br>
+
+
 - After adding different types of noise to each half of the signal to simulate environment changing, it was observed that with the forgetting factor λ=1, the RLS algorithm required a longer time to stabilize compared to the LMS algorithm. Additionally, the number of instances where the RLS squared error exceeded the LMS squared error was higher than the reverse, as depicted in the "Comparison of Error Occurrences" chart. The Average Squared Error Post-Change for Custom RLS was also greater than that for Custom LMS, further indicating the superior performance of LMS under these conditions. 
-<br>
+
+
 **Runtime (s) per run (MATLAB `tic/toc`):**
 
 <img width="431" height="161" alt="computationalEfficiency" src="https://github.com/user-attachments/assets/c161f85c-5dee-421b-a448-d9d4388e50dd" />
@@ -115,7 +129,8 @@ Graphically displayed the original denoised signal, noise reference signal, the 
 
 ---
 
-<br>
+
+
 ## 8) Choosing the Right Algorithm
 
 The selection between RLS and LMS can be guided by the specific needs of the application: 
@@ -132,7 +147,8 @@ The selection between RLS and LMS can be guided by the specific needs of the app
 - Simplicity and ease of implementation are desired, especially for initial prototyping or educational purposes.
 
 ---
-<br>
+
+
 ## 9) Acknowledgments
 
 * NI-provided denoised speech material used as the base for corruption and testing.
