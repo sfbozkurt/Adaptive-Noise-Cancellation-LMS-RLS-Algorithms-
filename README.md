@@ -72,29 +72,34 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 
 
 ### 6.1 ΔSNR (dB) — LMS vs RLS
-<img width="459" height="425" alt="SNR_lambda1" src="https://github.com/user-attachments/assets/3d1b5bb0-c646-4ea1-9483-b2dd83f3d5d0" />
+
+<img width="459" height="425" alt="SNR_lambda1" src="https://github.com/user-attachments/assets/40d6f789-2e4d-4d2d-a3bc-297908210856" />
 
 
 **Adaptation Speed:**
 
-<img width="457" height="451" alt="adaptationSpeed" src="https://github.com/user-attachments/assets/9084050c-7b54-443f-9b64-58d0ac9bc4cc" />
+<img width="457" height="451" alt="adaptationSpeed" src="https://github.com/user-attachments/assets/e23f48b1-e331-457c-92b8-ef541d8bb963" />
 
 
 **Runtime (s) per run (MATLAB `tic/toc`):**
 
-<img width="431" height="161" alt="computationalEfficiency" src="https://github.com/user-attachments/assets/55667ee9-68a0-49d2-b89a-e4b782f83db7" />
+<img width="431" height="161" alt="computationalEfficiency" src="https://github.com/user-attachments/assets/c161f85c-5dee-421b-a448-d9d4388e50dd" />
 
 
 
 ### 6.2 Figures
 
-* **Waveforms:** noisy input vs. ANC outputs
+* **Waveforms:**
+* Graphically displayed the original denoised signal, noise reference signal, the noised signal, and the filtered outputs using both LMS and RLS algorithms.
 * 
-<img width="563" height="368" alt="outputs" src="https://github.com/user-attachments/assets/4d1ddee3-b78a-464f-90ad-173fd96f008b" />
 
-<img width="451" height="346" alt="NI" src="https://github.com/user-attachments/assets/eff64a49-d038-4cf9-a1cd-9db1f7333835" />
+<img width="563" height="368" alt="outputs" src="https://github.com/user-attachments/assets/7f4b8685-f316-4a23-9618-56f39d859e22" />
 
-<img width="331" height="304" alt="rls" src="https://github.com/user-attachments/assets/64dfc7c1-e8a9-4133-b8a3-3a0f7f5b84e4" />
+* NI Denoised Signal - Noise Reference: White Noise - Noisy Signal * 
+<img width="451" height="346" alt="NI" src="https://github.com/user-attachments/assets/69f15f9a-4c10-42e0-b0a0-e58f81d6d568" />
+
+* Filtered signals (RLS & LMS) *
+<img width="331" height="304" alt="rls" src="https://github.com/user-attachments/assets/a372be44-49ec-4cd8-886d-4d297c20d7e0" />
 
 
 ---
