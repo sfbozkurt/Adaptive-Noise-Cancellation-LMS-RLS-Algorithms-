@@ -68,9 +68,22 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 
 ---
 
-## 6) Results
+### 6) Output Signals
 
+* **Waveforms:**
+Graphically displayed the original denoised signal, noise reference signal, the noised signal, and the filtered outputs using both LMS and RLS algorithms, all together.
 
+<img width="563" height="368" alt="outputs" src="https://github.com/user-attachments/assets/7f4b8685-f316-4a23-9618-56f39d859e22" />
+
+* NI Denoised Signal - Noise Reference: White Noise - Noisy Signal
+<img width="451" height="346" alt="NI" src="https://github.com/user-attachments/assets/69f15f9a-4c10-42e0-b0a0-e58f81d6d568" />
+
+* Filtered signals (RLS & LMS)
+<img width="331" height="304" alt="rls" src="https://github.com/user-attachments/assets/a372be44-49ec-4cd8-886d-4d297c20d7e0" />
+
+## 7) Adaptive Filter Performance Analysis
+
+**
 **ΔSNR (dB) — LMS vs RLS:**
 
 <img width="459" height="425" alt="SNR_lambda1" src="https://github.com/user-attachments/assets/40d6f789-2e4d-4d2d-a3bc-297908210856" />
@@ -93,24 +106,11 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 
 - The LMS algorithm demonstrates markedly higher computational efficiency compared to the RLS algorithm, both in built-in and custom implementations. This efficiency is primarily due to the LMS's simpler computational structure, which involves fewer and less complex operations. On the other hand, the RLS algorithm, despite its potential advantages in adaptation speed and noise reduction under optimal parameter settings, incurs a higher computational burden that results in longer execution times.
 
-### 6.2 Figures
-
-* **Waveforms:**
-* Graphically displayed the original denoised signal, noise reference signal, the noised signal, and the filtered outputs using both LMS and RLS algorithms, all together.
-
-<img width="563" height="368" alt="outputs" src="https://github.com/user-attachments/assets/7f4b8685-f316-4a23-9618-56f39d859e22" />
-
-* NI Denoised Signal - Noise Reference: White Noise - Noisy Signal
-<img width="451" height="346" alt="NI" src="https://github.com/user-attachments/assets/69f15f9a-4c10-42e0-b0a0-e58f81d6d568" />
-
-* Filtered signals (RLS & LMS)
-<img width="331" height="304" alt="rls" src="https://github.com/user-attachments/assets/a372be44-49ec-4cd8-886d-4d297c20d7e0" />
-
 
 ---
 
 
-## 7) Choosing the Right Algorithm
+## 8) Choosing the Right Algorithm
 
 The selection between RLS and LMS can be guided by the specific needs of the application: 
 
@@ -127,7 +127,7 @@ The selection between RLS and LMS can be guided by the specific needs of the app
 
 ---
 
-## 8) Acknowledgments
+## 9) Acknowledgments
 
 * NI-provided denoised speech material used as the base for corruption and testing.
 * MATLAB custom implementations compared against MATLAB built-ins for verification.
