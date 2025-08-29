@@ -115,7 +115,8 @@ Graphically displayed the original denoised signal, noise reference signal, the 
 - Subsequently, pink noise was introduced to the denoised signal. The RLS algorithm continued to demonstrate its advantage by attaining an SNR improvement of 18.54 dB, compared to 8.70 dB achieved by LMS. When brown noise was added, RLS still outperformed LMS, achieving an SNR improvement of 15.22 dB versus 4.82 dB for LMS. 
 
 - Across all three types of noise -white, pink, and brown- the RLS algorithm consistently provided greater SNR improvements compared to the LMS algorithm. However, the magnitude of SNR enhancement decreased progressively from white noise to pink noise to brown noise. This trend can be attributed to the inherent spectral characteristics of each noise type.
-<br>
+
+
 **Adaptation Speed:**
 
 <img width="457" height="451" alt="adaptationSpeed" src="https://github.com/user-attachments/assets/e23f48b1-e331-457c-92b8-ef541d8bb963" />
