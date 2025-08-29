@@ -47,7 +47,7 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 
 ### 4.1 Metrics
 
-* **Noise Reduction (ΔSNR in dB):** $\Delta\mathrm{SNR} = \mathrm{SNR}_{\text{out}} - \mathrm{SNR}_{\text{in}}$.
+* **Noise Reduction (ΔSNR in dB):** ΔSNR = SNR(out) - SNR(in).
 * **Adaptation Speed:** iterations/samples to reach a target fraction of final MSE.
 * **Computational Efficiency:** elapsed time (s) per run.
 
