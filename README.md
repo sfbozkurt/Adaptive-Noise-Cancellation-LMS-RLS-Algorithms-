@@ -71,7 +71,7 @@ This project implements and compares **Least Mean Squares (LMS)** and **Recursiv
 ## 6) Results
 
 
-### 6.1 ΔSNR (dB) — LMS vs RLS
+**ΔSNR (dB) — LMS vs RLS:**
 
 <img width="459" height="425" alt="SNR_lambda1" src="https://github.com/user-attachments/assets/40d6f789-2e4d-4d2d-a3bc-297908210856" />
 
